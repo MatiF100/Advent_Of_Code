@@ -1,0 +1,1 @@
+Repository for my terrible solutions to Advent Of Code problems
