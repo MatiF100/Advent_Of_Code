@@ -31,10 +31,10 @@ fn search_for_sequence(buses: &Vec<&str>) -> usize {
             (
                 match bus.checked_sub(idx) {
                     Some(dif) => dif,
-                    
+
                     //I have gotten to this using paint, screen capture and a ton of weird logic... Don't ask me how i got this None variant to work
-                    None => bus - (idx % bus) ,
-                }%bus,
+                    None => bus - (idx % bus),
+                } % bus,
                 bus,
             )
         })
