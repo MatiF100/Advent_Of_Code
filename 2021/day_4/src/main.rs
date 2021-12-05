@@ -1,4 +1,4 @@
-fn main() {
+fn main(){
     let input = if let Ok(s) = std::fs::read_to_string("input.txt") {
         s
     } else {
