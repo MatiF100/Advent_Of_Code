@@ -15,6 +15,7 @@ Cargo.lock
 
 # Files with input data from adventofcode.com
 input.txt
+*.txt
 
 # VS Code configuration
 .vscode/
