@@ -29,7 +29,11 @@ fn main() {
                         if let Some(idx) = line.find(pat.0) {
                             Some((idx, pat.1))
                         } else {
-                           if let Some (idx) = line.find(|c: char| c.is_numeric()){Some((idx, (line.as_bytes()[idx] as char).to_digit(10).unwrap()))} else {None}
+                            if let Some(idx) = line.find(|c: char| c.is_numeric()) {
+                                Some((idx, (line.as_bytes()[idx] as char).to_digit(10).unwrap()))
+                            } else {
+                                None
+                            }
                         }
                     })
                     .min_by(|a, b| a.0.cmp(&b.0))
@@ -40,7 +44,11 @@ fn main() {
                         if let Some(idx) = line.rfind(pat.0) {
                             Some((idx, pat.1))
                         } else {
-                           if let Some (idx) = line.rfind(|c: char| c.is_numeric()){Some((idx, (line.as_bytes()[idx] as char).to_digit(10).unwrap()))} else {None}
+                            if let Some(idx) = line.rfind(|c: char| c.is_numeric()) {
+                                Some((idx, (line.as_bytes()[idx] as char).to_digit(10).unwrap()))
+                            } else {
+                                None
+                            }
                         }
                     })
                     .max_by(|a, b| a.0.cmp(&b.0))
